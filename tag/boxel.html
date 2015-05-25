@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- ## for client-side less
+		<link rel="stylesheet/less" type="text/css" href="../theme/css/style.less">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+		-->
+		<link rel="stylesheet" type="text/css" href="../theme/css/style.css">
+
+		<link rel="stylesheet" type="text/css" href="../theme/css/pygments.css">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="chenstopher">
+		<meta name="description" content="Posts and writings by chenstopher">
+
+
+
+		<title>
+Tag: boxel		</title>
+
+	</head>
+
+	<body>
+		<aside>
+			<div id="sidebar">
+				<section class="logo">
+					<a href="..">
+						<img src="/images/me.png" alt="logo" class="logo">
+					</a>
+				</section>
+
+				<section>
+					<h2><a href="..">chenstopher</a></h2>
+					<p>Hello, my name is Chris.</p>
+
+					<nav>
+						<ul>
+							<li><a href="../pages/about.html">About</a></li>
+							<li><a href="../pages/projects.html">Projects</a></li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+		</aside>
+
+		<main>
+			<header>
+<h1>Tag: boxel </h1>
+			</header>
+
+<article>
+	<header>
+		<h1><a href="../voxel-terrain-2.html">Voxel Terrain 2</a></h1>
+		<p>14 April 2012</p>
+	</header>
+	<div class="article_text">
+		<p><div class="videobox">
+                <iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/o-fgUeWt1UM'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+            </div></p>
+<p>I had to demo my progress to my professor this week so I worked on it a
+lot. Some changes I made are:</p>
+<p><strong>"Infinite" terrain</strong>. The world is now made of chunks of voxels. I add
+and remove chunks from a chunk buffer so that only chunks around the
+player are actually loaded and drawn. The generating is done
+asynchronously so it doesn't kill the framerate.
+
+		<p><a href="../voxel-terrain-2.html">Continue reading...</a></p>
+	</div>
+</article>
+<hr />
+<article>
+	<header>
+		<h1><a href="../voxel-terrain-1.html">Voxel Terrain 1</a></h1>
+		<p>02 April 2012</p>
+	</header>
+	<div class="article_text">
+		<p><a href="../images/2012/04/voxel-terrain.png"><img alt="" src="../images/2012/04/voxel-terrain-570x445.png" title="voxel-terrain" /></a></p>
+<p>So I just started working on this procedurally generated voxel/boxel
+terrain thing for my computer graphics final project. The above screen
+shot is what it looks like after a couple hours of work. That's a
+200x200 grid. And yes, sadly, that is 19 frames per second.</p>
+<p>Right now, I'm just generating the terrain using 2D Perlin noise stored
+in a heightmap. Using a heightmap isn't really ideal since I can't
+really use it to store caves or overhangs. Eventually I'm going to
+update that to an octtree and use some combination of 3D Perlin noise
+stuff for generating the map.</p>
+<p>For drawing, I just draw every single block which pretty much explains
+the 19 FPS. I have some ideas for optimizing it, such as only drawing
+blocks that are inside the view frustum and only drawing faces that are
+touching empty blocks, but I haven't gotten around to doing that. My
+OpenGL skills aren't there yet.</p>
+<p>I'll post some more when I have more to show.</p>
+	</div>
+</article>
+
+			<footer>
+<div id="paginator">
+
+</div>
+			</footer>
+
+		</main>
+	</body>
+</html>
