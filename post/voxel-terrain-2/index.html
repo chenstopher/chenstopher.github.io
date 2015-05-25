@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- ## for client-side less
+		<link rel="stylesheet/less" type="text/css" href="../../theme/css/style.less">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+		-->
+		<link rel="stylesheet" type="text/css" href="../../theme/css/style.css">
+
+		<link rel="stylesheet" type="text/css" href="../../theme/css/pygments.css">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="chenstopher">
+		<meta name="description" content="Posts and writings by chenstopher">
+
+
+<meta name="keywords" content="boxel, computer graphics, cse328, terrain, voxel">
+
+		<title>
+Voxel Terrain 2		</title>
+
+	</head>
+
+	<body>
+		<aside>
+			<div id="sidebar">
+				<section class="logo">
+					<a href="../..">
+						<img src="/images/me.png" alt="logo" class="logo">
+					</a>
+				</section>
+
+				<section>
+					<h2><a href="../..">chenstopher</a></h2>
+					<p>Hello, my name is Chris.</p>
+
+					<nav>
+						<ul>
+							<li><a href="../../about/">About</a></li>
+							<li><a href="../../projects/">Projects</a></li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+		</aside>
+
+		<main>
+			<header>
+			</header>
+
+<article class="post">
+	<header>
+		<h1><a href="../../post/voxel-terrain-2/">Voxel Terrain 2</a></h1>
+		<p>14 April 2012</p>
+	</header>
+	<div class="article_text">
+		<p><div class="videobox">
+                <iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/o-fgUeWt1UM'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+            </div></p>
+<p>I had to demo my progress to my professor this week so I worked on it a
+lot. Some changes I made are:</p>
+<p><strong>"Infinite" terrain</strong>. The world is now made of chunks of voxels. I add
+and remove chunks from a chunk buffer so that only chunks around the
+player are actually loaded and drawn. The generating is done
+asynchronously so it doesn't kill the framerate.
+</p>
+<p><strong>Caves, overhangs, and tunnels</strong>. I took some pointers from <a href="http://notch.tumblr.com/post/3746989361/terrain-generation-part-1">notch's
+post</a>
+about terrain generation and so now terrain is now generated through a
+density map. I fill the 3D density map by sampling 3d Perlin noise,
+augmented by turbulence, at specific intervals. Then I just use
+trilinear interpolation to fill in the missing details. The resulting
+density map is then cut to form tunnels using another rigid multi
+fractal noise generator.</p>
+<p><strong>Basic materials (grass, dirt, sand, stone, water)</strong>. These are
+determined using the density map described above and depth information.
+Densities less than 0 are air blocks. Other types of blocks are
+determined by a combination of depth and density. I'm still not happy
+with this because, as you can see from the video, areas under certain
+overhangs leave a silhouette of stone.</p>
+<p><strong>Much better performance</strong> (200 fps vs 19 fps). This is mainly thanks
+to face culling and only drawing faces that are touching air blocks.
+Right now I'm using display lists. I tried using VBOs but I'm still kind
+of confused on how to actually use it correctly. There is a bunch of
+conflicting information about deprecated functions and stuff. But I'm
+pretty happy with display lists so far.</p>
+<p>For the future: textures, better and less weird terrain, skybox, better
+lighting, trees?, and flowing water?</p>
+	</div>
+
+
+</article>
+
+			<footer>
+<script language="javascript">
+	function toggleComments() {
+		var commentDiv = document.getElementById("article_comments");
+		(commentDiv.style.display == "none") ? commentDiv.style.display = "block" : commentDiv.style.display = "none";
+		return false;
+	}
+</script>
+			</footer>
+
+		</main>
+	</body>
+</html>
