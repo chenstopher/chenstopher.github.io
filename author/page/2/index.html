@@ -52,6 +52,31 @@ Author: chenstopher		</title>
 
 <article class="post">
 	<header>
+		<h1><a href="../../../post/voxel-terrain-1/">Voxel Terrain 1</a></h1>
+		<p>02 April 2012</p>
+	</header>
+	<div class="article_text">
+		<p><a href="../../../images/2012/04/voxel-terrain.png"><img alt="" src="../../../images/2012/04/voxel-terrain-570x445.png" title="voxel-terrain" /></a></p>
+<p>So I just started working on this procedurally generated voxel/boxel
+terrain thing for my computer graphics final project. The above screen
+shot is what it looks like after a couple hours of work. That's a
+200x200 grid. And yes, sadly, that is 19 frames per second.</p>
+<p>Right now, I'm just generating the terrain using 2D Perlin noise stored
+in a heightmap. Using a heightmap isn't really ideal since I can't
+really use it to store caves or overhangs. Eventually I'm going to
+update that to an octtree and use some combination of 3D Perlin noise
+stuff for generating the map.</p>
+<p>For drawing, I just draw every single block which pretty much explains
+the 19 FPS. I have some ideas for optimizing it, such as only drawing
+blocks that are inside the view frustum and only drawing faces that are
+touching empty blocks, but I haven't gotten around to doing that. My
+OpenGL skills aren't there yet.</p>
+<p>I'll post some more when I have more to show.</p>
+	</div>
+</article>
+<hr />
+<article class="post">
+	<header>
 		<h1><a href="../../../post/builder/">Builder</a></h1>
 		<p>18 March 2012</p>
 	</header>
@@ -231,23 +256,6 @@ to do a jump.</p>
 		<p><a href="http://www.imdb.com/title/tt1440292/"><img alt="" src="../../../images/2011/12/submarine-570x320.jpg" title="submarine" /></a></p>
 <p><a href="http://www.imdb.com/title/tt1440292/">Submarine</a>. Good movie. <a href="http://www.youtube.com/watch?v=hyJhep67py8">Good
 music</a>.</p>
-	</div>
-</article>
-<hr />
-<article class="post">
-	<header>
-		<h1><a href="../../../post/urban-skiing/">Urban Skiing</a></h1>
-		<p>28 November 2011</p>
-	</header>
-	<div class="article_text">
-		<p><div class="videobox">
-                <iframe width="640" height="390"
-                    src='https://www.youtube.com/embed/YlE7oTd_ncY'
-                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
-                    allowFullScreen>
-                </iframe>
-            </div></p>
-<p>I can't wait to go snowboarding.</p>
 	</div>
 </article>
 
