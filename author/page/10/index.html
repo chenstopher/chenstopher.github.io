@@ -52,6 +52,106 @@ Author: chenstopher		</title>
 
 <article class="post">
 	<header>
+		<h1><a href="../../../post/oh-noez-no-space-on-the-server/">Oh noez, no space on the server</a></h1>
+		<p>08 January 2009</p>
+	</header>
+	<div class="article_text">
+		<p>A couple years ago I had this awesome idea to build a home file server
+and back up all my DVDs and media onto it. I would also have HTPCs
+connected to each TV in the house that way we would be able to access
+all my movies and music. We also have a home theater room with a
+projection screen and I planned to connect a HTPC to that as well. It
+seemed like the perfect plan.</p>
+<!--more-->
+
+<p>Now fast forward to today. I have a 2TB server with only 146GB of free
+space. Only one of the three TV’s have a HTPC connected to it. And the
+home theater room is computer-less.</p>
+<p>Yeah, wtf?</p>
+<h2>The Problem:</h2>
+<p>The HTPC’s connected to the TV’s aren’t really much a problem. Just
+laziness.</p>
+<p>However, the lack of space on the server is. Backing up DVDs takes up A
+LOT of space and A LOT of time. Each DVD, menus and extras stripped,
+takes up about 4 and half gigs and from 10 minutes to an hour to back
+up. I have over 300 DVDs. Let’s look at the math:</p>
+<p><strong>300 DVDs * 4.5 GB/DVD = 1350 gigs!</strong></p>
+<p>Okay, so you’re saying that doesn’t doesn’t take up all of the 2TB of
+space. But I have other things on there as well. A crap load of shows,
+game ISOs, music, pictures and backups. All that is about 900GB.</p>
+<p><strong>1350GB + 900GB = 2.250TB > 2TB!</strong> I don’t have enough space.</p>
+<p>Yeah, I could convert the DVDs to a compressed format but do you have
+any idea how long that would take? Let’s say it takes 20 minutes to rip
+a DVD.</p>
+<p><strong>300 DVDs * 20 minutes/DVD = 6000 minutes = 100 hours = 4.16 days.</strong>
+Ok, that’s not so bad. I’ve already copied about 3/4th of them.</p>
+<p>Now lets see the time it would take to encode them to… h264 mkv.</p>
+<p><strong>300 DVDs * 90 minutes/DVD = 27,000 minutes = 450 hours = 18.75
+days!</strong></p>
+<p>And that’s not including the time it would take to set it up. In total
+it would take me <strong>about 23 days</strong> to copy and encode all of them. 23
+days straight! Non-stop! That’s freaking crazy! So what do I do?</p>
+<h2>The Solution:</h2>
+<p>Well I guess the easiest way would be to UPGRADE THE SERVER! Yay!</p>
+<p>I’ve been looking for a way to easily add more hard drives of different
+sizes and still have some sort of data redundancy. Plus I kind of want
+to get rid of the RAID array and just use JBOD (Just a bunch of disks).</p>
+<p>Enter <a href="http://www.microsoft.com/windows/products/winfamily/windowshomeserver/default.mspx">Windows Home
+Server</a>.</p>
+<p>Microsoft’s Windows for uh.. a home server. Adding space is easy, just
+connect the drive and add it to the WHS “data pool”. Client computers
+can then access the data. There’s file duplication which copies the the
+data over multiple drives for redundancy. Unlike using a RAID array,
+where all hard drives have to be the same size, WHS allows hard drives
+of different sizes just like JBOD. WHS is better than JBOD due to the
+fact that if the rest of the your computer dies, your data is lost with
+it. With WHS, you are able to just reinstall the OS and add the drives
+to the “data pool” and all is good. There are also add-ins and more cool
+stuff.</p>
+<p>One tiny problem though. The RAID controller I’m using is totally out of
+SATA slots so I can’t add anymore drives to the RAID array. And the case
+I’m using is out of drive bays so I can’t add more SATA controllers. I
+have a couple of options.</p>
+<h4>Option 1:</h4>
+<ol>
+<li>Buy some 1TB drives</li>
+<li>Copy data from RAID array to new 1TB drives</li>
+<li>Install WHS</li>
+<li>Delete RAID array</li>
+<li>Remove some of the older 320GB drives to free up SATA slots</li>
+<li>Connect new 1TB drives to free SATA slots</li>
+<li>Add to “data pool”</li>
+<li>Drink coke and watch movies!</li>
+</ol>
+<h4>Option 2:</h4>
+<ol>
+<li>Buy a bigger case, SATA controller, and some 1TB drives</li>
+<li>Rebuild server in new case</li>
+<li>Install WHS</li>
+<li>Delete RAID array</li>
+<li>Use RAID controller as SATA controller</li>
+<li>Add existing drives to "data pool"</li>
+<li>Install new SATA controller</li>
+<li>Add new drives to "data pool"</li>
+<li>Drink coke and watch movies!</li>
+</ol>
+<h4>Option 3:</h4>
+<ol>
+<li>Buy and build new server using old drives + new drives</li>
+<li>Convert existing server to Left 4 Dead gaming machine!</li>
+<li>Drink coke and play Left 4 Dead!</li>
+</ol>
+<p>I’m leaning towards option 3. Hehe.</p>
+<p>I just want to make the home file server easier to manage and more
+flexible. I think Windows Home Server will help with that and maybe a
+new case. Hot swappable drive bays would be nice too so I don’t to open
+up the case every time I want to add a new drive.</p>
+<p>Well, I’m gonna go do some more research.</p>
+	</div>
+</article>
+<hr />
+<article class="post">
+	<header>
 		<h1><a href="../../../post/hamburger-phone/">Hamburger Phone</a></h1>
 		<p>03 January 2009</p>
 	</header>
@@ -233,44 +333,6 @@ impossible to run but then you get the hang of it and it's kind of
 satisfying. Its hilarious when Qwop falls cause he looks so freaking
 dumb. My best is 53.2m by actually running. Not that stupid crawling
 crap.</p>
-	</div>
-</article>
-<hr />
-<article class="post">
-	<header>
-		<h1><a href="../../../post/an-oddly-shaped-chicken-tender/">An Oddly Shaped Chicken Tender</a></h1>
-		<p>09 November 2008</p>
-	</header>
-	<div class="article_text">
-		<p>A couple days ago, I went to the
-<a href="http://www.campusdining.org/location-union-commons?PHPSESSID=3793723da705a07bf83ca0fad2a01fd3">Union</a>
-to get some food with people. I went in and grabbed CJ's Chicken Tenders
-and a cream soda and sat down to eat. I start eating the chicken tenders
-one by one not really paying attention to what they looked like.
-Finally, I got to the last one and noticed something strange about it.</p>
-<p><a href="../../../images/2008/11/chicken-tender-21.jpg"><img alt="Chicken Tender
-(2)" src="../../../images/2008/11/chicken-tender-2-thumb1.jpg" /></a>
-<a href="../../../images/2008/11/chicken-tender1.jpg"><img alt="Chicken
-Tender" src="../../../images/2008/11/chicken-tender-thumb1.jpg" /></a>
-<a href="../../../images/2008/11/chicken-tender-83.jpg"><img alt="Chicken Tender
-(8)" src="../../../images/2008/11/chicken-tender-8-thumb2.jpg" /></a></p>
-<!--more-->
-
-<p><strong>It looks like a PENIS!</strong></p>
-<p><a href="../../../images/2008/11/chicken-tender-41.jpg"><img alt="Chicken Tender
-(4)" src="../../../images/2008/11/chicken-tender-4-thumb1.jpg" /></a>
-<a href="../../../images/2008/11/chicken-tender-31.jpg"><img alt="Chicken Tender
-(3)" src="../../../images/2008/11/chicken-tender-3-thumb1.jpg" /></a>
-<a href="../../../images/2008/11/img-02601.jpg"><img alt="IMG_0260" src="../../../images/2008/11/img-0260-thumb1.jpg" /></a></p>
-<p>I thought It would be funny to put
-<a href="http://qtjoel.com/2008/10/14/jason-tutoring/">Jason</a> on it. Just look
-at his face! What a douche.</p>
-<p><a href="../../../images/2008/11/chicken-tender-5.jpg"><img alt="Chicken Tender
-(5)" src="../../../images/2008/11/chicken-tender-5-thumb.jpg" /></a></p>
-<p>I still haven't eaten the penis-shaped chicken tender 'cause it seems
-kind of awkward. It stuck it in the fridge and now its just sitting
-there. Maybe someday someone will open it and eat it, not paying
-attention to the shape of it, and we'll all laugh at him. Penis-eater.</p>
 	</div>
 </article>
 

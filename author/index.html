@@ -52,6 +52,33 @@ Author: chenstopher		</title>
 
 <article class="post">
 	<header>
+		<h1><a href="../post/apartment-automation-adventures-pt-2/">Apartment Automation Adventures Pt 2</a></h1>
+		<p>01 July 2015</p>
+	</header>
+	<div class="article_text">
+		<p><div class="videobox">
+                <iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/---kPhAFkGk'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+            </div></p>
+<p>Installed the in-wall Z-Wave switch for my bedroom lights today. It's this little device that sits behind the
+light switch in the junction box and allows you to turn any light switch into a Z-Wave connected one. That's
+nice cause I like the way my light switches look. Most of the Z-Wave enabled switches I've seen look like crap.</p>
+<p>I've installed light switches before, but I was a little afraid when hooking up this device. If I hooked it up
+incorrectly, I could've blown it up and I'd be out $35. Or worst case scenario my apartment burns down.
+So I made sure to triple check my wiring with the documentation before turning the breaker back on.</p>
+<p>In the end, it went pretty smoothly. I did have an issue with the light status not reporting correctly when I
+flipped the physical switch but that was just a configuration problem. I had to make sure to set the association
+groups for the device so that it would report the status back to the controller.</p>
+<p>Next step is installing these for the rest of my lights. And then maybe figuring out how to get my ancient AC
+units connected to the system.</p>
+	</div>
+</article>
+<hr />
+<article class="post">
+	<header>
 		<h1><a href="../post/apartment-automation-adventures-pt-1/">Apartment Automation Adventures Pt 1</a></h1>
 		<p>30 June 2015</p>
 	</header>
@@ -271,30 +298,6 @@ want to play around with it. However, I can't guarantee it will work
 with your machine cause the only ones I've tested it on is my desktop
 and my laptop. And both are pretty beefy machines. So, good luck.</p>
 <p>AH! FINALS.</p>
-	</div>
-</article>
-<hr />
-<article class="post">
-	<header>
-		<h1><a href="../post/voxel-terrain-2/">Voxel Terrain 2</a></h1>
-		<p>14 April 2012</p>
-	</header>
-	<div class="article_text">
-		<p><div class="videobox">
-                <iframe width="640" height="390"
-                    src='https://www.youtube.com/embed/o-fgUeWt1UM'
-                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
-                    allowFullScreen>
-                </iframe>
-            </div></p>
-<p>I had to demo my progress to my professor this week so I worked on it a
-lot. Some changes I made are:</p>
-<p><strong>"Infinite" terrain</strong>. The world is now made of chunks of voxels. I add
-and remove chunks from a chunk buffer so that only chunks around the
-player are actually loaded and drawn. The generating is done
-asynchronously so it doesn't kill the framerate.
-
-		<p><a href="../post/voxel-terrain-2/" class="read_more">Read More</a></p>
 	</div>
 </article>
 
